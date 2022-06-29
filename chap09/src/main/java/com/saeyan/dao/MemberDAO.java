@@ -1,6 +1,7 @@
 package com.saeyan.dao;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -24,7 +25,6 @@ public class MemberDAO {
 	
 	public Connection getConnection() throws Exception{
 		
-		
 		Connection conn = null;
 		
 		Context initContext = new InitialContext();
@@ -33,6 +33,7 @@ public class MemberDAO {
 		conn = ds.getConnection();
 		return conn;
 	}
+	
 	//사용자 인증시 사용하는 메소드
 	public int userCheck(String userid, String pwd) {
 		int result = -1;
@@ -133,9 +134,11 @@ public int confirmID(String userid) {
 	}
 	return result;
 	}
+
+
 	public int insertMember(MemberVO mVo) {
 		int result = -1;
-		String sql = "insert into member valuser(?, ?, ?, ?, ?, ?)";
+		String sql = "insert into member values(?, ?, ?, ?, ?, ?)";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		try {
