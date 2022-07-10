@@ -19,10 +19,10 @@ public class BoardDAO {
 	private static BoardDAO instance = new BoardDAO();
 	
 	public static BoardDAO getInstance() {
-		return instance;
+		return instance;										// BoardDAO 객체를 리턴
 	}
 
-	public List<BoardVO> selectAllBoards() {
+	public List<BoardVO> selectAllBoards() {					// 최근 등록한 게시글이 먼저 나오도록 게시글 목록을 출력
 		String sql = "SELECT * FROM BOARD ORDER BY NUM DESC";
 		
 		List<BoardVO> list = new ArrayList<BoardVO>();
@@ -150,8 +150,8 @@ public class BoardDAO {
 			pstmt = conn.prepareStatement(sql);
 			
 			pstmt.setString(1, bVo.getName());
-			pstmt.setString(2, bVo.getEmail());
-			pstmt.setString(3, bVo.getPass());
+			pstmt.setString(2, bVo.getPass());
+			pstmt.setString(3, bVo.getEmail());
 			pstmt.setString(4, bVo.getTitle());
 			pstmt.setString(5, bVo.getContent());
 			pstmt.setInt(6, bVo.getNum());
