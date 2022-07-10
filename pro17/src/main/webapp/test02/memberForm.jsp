@@ -8,6 +8,7 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +25,7 @@
 	}
 </style>
 </head>
+	
 <body>
 	<p class = "cls1" >회원정보</p>
 	<table align = "center" border = "1">
