@@ -1,4 +1,4 @@
-package sec02.ex01;
+package sec02.ex02;
 
 import java.sql.Date;
 

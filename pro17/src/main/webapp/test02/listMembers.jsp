@@ -8,7 +8,6 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +24,6 @@
 	}
 </style>
 </head>
-	
 <body>
 	<p class = "cls1" >회원정보</p>
 	<table align = "center" border = "1">
@@ -58,7 +56,7 @@
 			</c:when>
 		</c:choose>
 	</table>
-	<a href = "${contextPath}/member/memberForm.do">
+	<a href = "${contextPath}/member/memberForm.do">	<!-- 회원가입하기 클릭 시 서블릿에 /member/memberForm.do로 요청 --> 
 		<p class="cls2">회원 가입하기</p>
 	</a>
 </body>
